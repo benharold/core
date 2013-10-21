@@ -315,7 +315,9 @@ CONTENTS;
 			$model = <<<MODEL
 <?php
 
-class Model_{$class_name} extends \Model_Crud
+namespace Model;
+
+class {$class_name} extends \Model_Crud
 {
 {$contents}
 }
@@ -440,7 +442,9 @@ CONTENTS;
 				$model .= <<<MODEL
 <?php
 
-class Model_{$class_name} extends \Orm\Model_Soft
+namespace Model;
+
+class {$class_name} extends \Orm\Model_Soft
 {
 {$contents}
 }
@@ -452,7 +456,9 @@ MODEL;
 				$model .= <<<MODEL
 <?php
 
-class Model_{$class_name} extends \Orm\Model
+namespace Model;
+
+class {$class_name} extends \Orm\Model
 {
 {$contents}
 }
